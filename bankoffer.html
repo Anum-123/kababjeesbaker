@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>About US</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    .topnav {
+      background-color: #ff0000;
+      padding: 10px;
+      /* Adjust as needed */
+    }
+
+    .topnav a {
+      color: white;
+      font-size: larger;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 5px;
+      border-right: 2px solid white;
+      text-decoration: none;
+    }
+
+
+
+    .middlenav nav {
+      padding: 10px;
+      text-decoration: none;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      flex-grow: 1;
+      display: flex;
+    }
+
+    .middlenav {
+      background-color: #2b2b2b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+
+    }
+
+    .middlenav a {
+      color: white;
+      font-size: medium;
+      text-decoration: none;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .middlenav a:hover {
+      color: #ff0000;
+    }
+
+    .middlenav a.active {
+      color: #ff0000;
+
+    }
+
+    .middlenav button {
+      margin-top: 30px;
+      background-color: #ff0000;
+      color: white;
+      height: 40px;
+      width: 10%;
+      border: 2px #ff0000;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 30px;
+
+    }
+
+    .logo {
+      margin-left: 70px;
+    }
+
+    .feedback {
+      background-image: url(image\ slideshow1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      flex: 1;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th {
+      padding: 8px;
+      text-align: left;
+      color: white;
+    }
+
+    td {
+      border: 1px solid white;
+      padding: 8px;
+      text-align: left;
+      color: white;
+    }
+
+    th {
+      background-color: #ff0000;
+    }
+
+    tr:nth-child(even) {
+      background-color: #4c4c4c;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #2b2b2b;
+    }
+
+    .additional-text {
+      background-color: white;
+      color: black;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bolder;
+      width: 100%;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: center; */
+      margin-top: 20px;
+    }
+
+    .flogo {
+      margin: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      font-size: medium;
+      padding: 20px;
+    }
+
+    .socialmedia {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .fa {
+      padding: 15px;
+      font-size: 18px;
+      width: 10px;
+      height: 10px;
+      text-decoration: none;
+      margin: 2px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+      background-color: red;
+    }
+
+    .fa-facebook {
+      background: grey;
+      color: white;
+    }
+
+    .fa-youtube,
+    .fa-instagram {
+      background: grey;
+      color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+      .socialmedia {
+        justify-content: center;
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a {
+        font-size: small;
+      }
+
+
+
+      .middlenav button {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .box {
+        margin: 10px 0;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .flogo {
+        order: 2;
+      }
+
+      ul {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .socialmedia {
+        order: 1;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      /* Adjust styles for smaller screens */
+      .middlenav {
+        flex-direction: column;
+        /* align-items: center;
+        text-align: center; */
+      }
+
+      .middlenav img {
+        width: 80%;
+        /* Adjust as needed */
+        margin-bottom: 10px;
+      }
+
+      .middlenav nav {
+        margin-top: 10px;
+        justify-content: center;
+      }
+
+      .middlenav button {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 80%;
+      }
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+    }
+
+
+    @media screen and (max-width: 600px) {
+      .topnav a {
+        /* display: none; */
+        display: list-item;
+        font-weight: bold;
+
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      #navLinks {
+        display: none;
+      }
+
+      #navLinks.show {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
+    <nav id="navLinks">
+      <a style="margin-left: 5px;" href="#">Deals</a>
+      <a style="margin-left: 3px;" href="#">Cakes</a>
+      <a style="margin-left: 3px;" href="#">Cup Cakes</a>
+      <a style="margin-left: 3px;" href="#">Brownies</a>
+      <a style="margin-left: 3px;" href="#">Sundae</a>
+      <a style="margin-left: 3px;" href="#">Cake Bucket</a>
+      <a style="margin-left: 3px;" href="#">Biscuits</a>
+      <a style="margin-left: 3px;" href="#">Ice cream</a>
+      <a style="margin-left: 3px;" href="#">Chips & Nimcos</a>
+      <a style="margin-left: 3px;" href="#">Sweets</a>
+      <a style="margin-left: 3px;" href="#">Savory</a>
+      <a style="margin-left: 3px;" href="#">Breakfast</a>
+      <a style="margin-left: 3px;" href="#">Prepacked</a>
+      <!-- Add your other navigation links here -->
+    </nav>
+  </div>
+
+  <div class="middlenav">
+    <div class="logo">
+      <a href="#"><img width="250" height="127" src="kababjee logo.png" alt="img"></a>
+    </div>
+    <nav>
+      <a style="margin-left: 20px;" href="http://localhost/anumprogram/web/landingpage.php">HOME</a>
+      <a style="margin-left: 15px;" href="http://localhost/anumprogram/web/aboutus.html">ABOUT
+        US</a>
+      <a style="margin-left: 15px;" class="active" href="http://localhost/anumprogram/web/bankoffer.html">BANK
+        OFFERS</a>
+      <a style="margin-left: 15px;" href="http://localhost/anumprogram/web/ourlocatioon.html">OUR
+        LOCATION</a>
+      <a style="margin-left: 15px;" href="http://localhost/anumprogram/web/contactus.php">CONTACT
+        US</a>
+    </nav>
+    <!-- <button><a
+        href="file:///C:/xampp/htdocs/anumprogram/crud%20operation/crud%20operation/MERN%20Project/modal.html">ORDER
+        NOW</a></button> -->
+  </div>
+  <div class="feedback">
+    <p style="font-size: 80px; text-align: center; color: white;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Bank Offers</p>
+  </div>
+  <div class="container">
+    <div class="box ">
+      <img style="margin-left: 120px;" src="hbl.png" alt="hbl">
+      <table>
+        <tr>
+          <th>CARD TYPE</th>
+          <th>BIN #2</th>
+          <th>DISCOUNT & LIMIT</th>
+        </tr>
+        <tr>
+          <td>Visa Platinum Debit</td>
+          <td> 432868</td>
+          <td>25% (2,000 limit)</td>
+        </tr>
+        <tr>
+          <td>Master Gold Credit</td>
+          <td>526859</td>
+          <td>25% (2,000 limit)</td>
+        </tr>
+        <tr>
+          <td>PAYPAK</td>
+          <td>220553</td>
+          <td>15% (1,000 limit)</td>
+        </tr>
+        <tr>
+          <td>Visa Gold</td>
+          <td>437585</td>
+          <td>15% (1,000 limit)2</td>
+        </tr>
+        <tr>
+          <td>Union Pay</td>
+          <td>623359</td>
+          <td> 15% (1,000 limit)</td>
+        </tr>
+        <tr>
+          <td>Visa Silver</td>
+          <td>437584</td>
+          <td>15% (1,000 limit)</td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="box">
+      <img style="margin-left: 150px; margin-top: 40px;" src="jsbank.PNG" alt="jsbank">
+      <table>
+        <tr>
+          <th>CARD TYPE</th>
+          <th>BIN #2</th>
+          <th>DISCOUNT & LIMIT</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+        <tr>
+          <td>Data 7</td>
+          <td>Data 8</td>
+          <td>Data 9</td>
+        </tr>
+        <tr>
+          <td>Data 10</td>
+          <td>Data 11</td>
+          <td>Data 12</td>
+        </tr>
+        <tr>
+          <td>Data 13</td>
+          <td>Data 14</td>
+          <td>Data 15</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <div style="display: flex;" class="text1">
+        <img style="margin-left: 50px;" src="bankislami.PNG" alt="hbl">
+        <h3
+          style="font-style: italic; color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          ONLY APPLICABLE ON<br><span style="color: red; ">TUESDAY</span></h3>
+      </div>
+      <table>
+        <tr>
+          <th>CARD TYPE</th>
+          <th>BIN #2</th>
+          <th>DISCOUNT & LIMIT</th>
+        </tr>
+        <tr>
+          <td>Visa Platinum Debit</td>
+          <td> 432868</td>
+          <td>25% (2,000 limit)</td>
+        </tr>
+        <tr>
+          <td>Master Gold Credit</td>
+          <td>526859</td>
+          <td>25% (2,000 limit)</td>
+        </tr>
+
+      </table>
+      <div class="additional-text">
+        <p>VALID TILL 31ST - DECEMBER - 2023</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <img style="margin-left: 130px;" src="alliedbank.PNG" alt="jsbank">
+      <table>
+        <tr>
+          <th>CARD TYPE</th>
+          <th>BIN #2</th>
+          <th>DISCOUNT & LIMIT</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+        <tr>
+          <td>Data 7</td>
+          <td>Data 8</td>
+          <td>Data 9</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <img style="margin-left: 50px;" src="meezanbank.PNG" alt="hbl">
+      <table>
+        <tr>
+          <th>CARD TYPE</th>
+          <th>BIN #2</th>
+          <th>DISCOUNT & LIMIT</th>
+        </tr>
+        <tr>
+          <td>Visa Platinum Debit</td>
+          <td> 432868</td>
+          <td>25% (2,000 limit)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="box">
+      <div style="display: flex;" class="text1">
+        <img style="margin-left: 20px;" src="standardchartered.PNG" alt="jsbank">
+        <h3
+          style="font-style: italic; color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          ONLY
+          APPLICABLE ON<br><span style="color: red; ">Friday & Saturday </span></h3>
+      </div>
+      <table>
+        <tr>
+          <th>CARD TYPE</th>
+          <th>BIN #2</th>
+          <th>DISCOUNT & LIMIT</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+        <tr>
+          <td>Data 7</td>
+          <td>Data 8</td>
+          <td>Data 9</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="color: white; margin-top: 50px; margin-left: 90px;">Iso, Halal, & Haccap certified, approved by
+      the Sindh<br>
+      Food Authority & made to the very highest standards of hygiene &<br>
+      healthfulness, our age-old virtues of quality & good service <br>
+      intact, Kababjees is now reinventing the art of baking with the<br>
+      same tender loving care that has earned us your trust.
+    </p>
+    <img src="footerlogo.PNG" alt="img" class="flogo">
+
+    <ul style="margin-top: 40px;">
+      <li><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  padding: 20px;" href="#home">Cake</a></li>
+      <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    padding: 20px;" href="#news">Sweets</a></li>
+      <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    padding: 20px;" href="#contact">Nimco</a></li>
+
+    </ul>
+    <ul style="margin-top: 40px;">
+      <li><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  padding: 20px; margin-left: 30px; " href="#home">LOCATIONS</a></li>
+      <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    padding: 20px; margin-left: 30px;" href="#news">MENU</a></li>
+      <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    padding: 20px; margin-left: 30px; " href="#contact">CONTACT US</a></li>
+
+    </ul>
+  </div>
+  <div class="socialmedia">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+  </div>
+  <script>
+    function toggleMenu() {
+      var navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+</body>
+
+</html>

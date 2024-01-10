@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About US</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .maindiv {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .topnav {
+            background-color: #ff0000;
+            height: 10%;
+        }
+
+        .topnav a {
+            color: white;
+            font-size: larger;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 5px;
+            border-right: 2px solid white;
+            text-decoration: none
+        }
+
+        .topnav nav {
+            padding: 25px;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        .middlenav {
+            background-color: #2b2b2b;
+            height: 15%;
+            display: flex;
+
+        }
+
+        .middlenav nav {
+            padding: 35px;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        .middlenav a {
+            color: white;
+            /* font-weight: bold; */
+            font-size: medium;
+            text-decoration: none;
+
+        }
+
+        .middlenav a:hover {
+            color: #ff0000;
+        }
+
+        .middlenav a.active {
+            color: #ff0000;
+
+        }
+
+        .middlenav button {
+            margin-top: 30px;
+            background-color: #ff0000;
+            color: white;
+            height: 40px;
+            width: 10%;
+            border: 2px #ff0000;
+            border-radius: 3px;
+            margin-left: 40px;
+            cursor: pointer;
+
+        }
+
+        .middlenav .logo {
+            margin-left: 70px;
+        }
+
+        .feedback {
+            background-image: url(donut.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+
+        }
+
+        .center {
+            padding: 30px;
+            color: white;
+            text-align: center;
+
+        }
+
+        button {
+            background-color: black;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: 20px;
+            height: 35px;
+            width: 90%;
+            border-radius: 20px;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        /* .footer {
+            display: flex;
+        }
+
+        .flogo {
+            margin-left: 50px;
+            padding: 20px;
+        }
+
+        .fa {
+            padding: 15px;
+            font-size: 18px;
+            width: 10px;
+            height: 10px;
+            text-decoration: none;
+            margin: 2px 2px;
+            border-radius: 50%;
+
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+            background-color: red;
+        }
+
+        .fa-facebook {
+            background: grey;
+            color: white;
+            justify-content: center;
+        }
+
+        .fa-youtube {
+            background: grey;
+            color: white;
+            justify-content: center;
+        }
+
+        .fa-instagram {
+            background: grey;
+            color: white;
+            justify-content: center;
+        } */
+
+
+        .bottom-container1 {
+            display: flex;
+            margin: 50px;
+            margin-left: 50px;
+            justify-content: center;
+
+        }
+
+        .bottom1 {
+            height: 400px;
+            width: 300px;
+            border: 2px white;
+            border-radius: 10px;
+            background-image: url(rafaello.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px 400px;
+            margin: 25px;
+
+        }
+
+        .bottom2 {
+            height: 400px;
+            width: 300px;
+            border: 2px white;
+            border-radius: 10px;
+            background-image: url(heaven.PNG);
+            background-repeat: no-repeat;
+            background-size: 300px 400px;
+            margin: 25px;
+        }
+
+        .container {
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; */
+            width: 100%;
+        }
+
+        .map-container {
+            /* display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 80%;
+            Adjust width as needed */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .map-box {
+            width: 100%;
+            /* Adjust as needed */
+            /* border: 1px solid #ccc; */
+            /* padding: 10px;
+            margin-bottom: 20px; */
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .map-box {
+                max-width: none;
+            }
+        }
+
+
+        .map-box iframe {
+            width: 100%;
+        }
+
+        .description {
+            display: flex;
+            align-items: center;
+        }
+
+        .description .icon {
+            margin-right: 10px;
+        }
+
+        .description img {
+            width: 20px;
+            /* Adjust icon size as needed */
+            height: 20px;
+        }
+
+        .description .text {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+        }
+
+        .button-container {
+            text-align: left;
+            margin: 0;
+        }
+
+        .custom-button {
+            background-color: red;
+            color: white;
+            margin-top: 10px;
+            border-radius: 2px;
+            cursor: pointer;
+            height: 40px;
+            width: 50%;
+            border: 2px #ff0000;
+        }
+
+        .custom-button:hover {
+            background-color: red;
+        }
+
+        .location-name {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: red;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            margin-top: 20px;
+        }
+
+        .flogo {
+            /* margin-left: 50px;
+            padding: 20px; */
+            margin: 10px;
+        }
+
+        .fa {
+            padding: 15px;
+            font-size: 18px;
+            width: 10px;
+            height: 10px;
+            text-decoration: none;
+            margin: 2px 2px;
+            border-radius: 50%;
+
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+            background-color: red;
+        }
+
+        .fa-facebook {
+            background: grey;
+            color: white;
+            justify-content: center;
+        }
+
+        .fa-youtube {
+            background: grey;
+            color: white;
+            justify-content: center;
+        }
+
+        .fa-instagram {
+            background: grey;
+            color: white;
+            justify-content: center;
+        }
+
+        .socialmedia {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .socialmedia {
+                justify-content: center;
+                margin-left: 0;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            /* Responsive styles for small screens (e.g., mobile) */
+            .topnav a {
+                font-size: small;
+            }
+
+            .middlenav {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .middlenav nav {
+                margin-top: 10px;
+            }
+
+            .middlenav button {
+                margin-top: 10px;
+                margin-left: 0;
+                width: 80%;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer p {
+                margin-left: 0;
+            }
+
+            .socialmedia {
+                margin-left: 0;
+            }
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .topnav a {
+                /* display: none; */
+                display: list-item;
+                font-weight: bold;
+
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            #navLinks {
+                display: none;
+            }
+
+            #navLinks.show {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav id="navLinks">
+            <a style="margin-left: 5px;" href="#">Deals</a>
+            <a style="margin-left: 3px;" href="#">Cakes</a>
+            <a style="margin-left: 3px;" href="#">Cup Cakes</a>
+            <a style="margin-left: 3px;" href="#">Brownies</a>
+            <a style="margin-left: 3px;" href="#">Sundae</a>
+            <a style="margin-left: 3px;" href="#">Cake Bucket</a>
+            <a style="margin-left: 3px;" href="#">Biscuits</a>
+            <a style="margin-left: 3px;" href="#">Ice cream</a>
+            <a style="margin-left: 3px;" href="#">Chips & Nimcos</a>
+            <a style="margin-left: 3px;" href="#">Sweets</a>
+            <a style="margin-left: 3px;" href="#">Savory</a>
+            <a style="margin-left: 3px;" href="#">Breakfast</a>
+            <a style="margin-left: 3px;" href="#">Prepacked</a>
+            <!-- Add your other navigation links here -->
+        </nav>
+    </div>
+
+    <div class="middlenav">
+        <div class="logo">
+            <a href="#"><img width="250" height="127" src="kababjee logo.png" alt="img"></a>
+        </div>
+        <nav>
+            <a style="margin-left: 20px;" href="http://localhost/anumprogram/web/landingpage.php">HOME</a>
+            <a style="margin-left: 15px;" href="http://localhost/anumprogram/web/aboutus.html">ABOUT
+                US</a>
+            <a style="margin-left: 15px;" href="http://localhost/anumprogram/web/bankoffer.html">BANK
+                OFFERS</a>
+            <a style="margin-left: 15px;" class="active" href="http://localhost/anumprogram/web/ourlocatioon.html">OUR
+                LOCATION</a>
+            <a style="margin-left: 15px;" href="http://localhost/anumprogram/web/contactus.php">CONTACT
+                US</a>
+        </nav>
+        <!-- <button><a
+                href="file:///C:/xampp/htdocs/anumprogram/crud%20operation/crud%20operation/MERN%20Project/modal.html">ORDER
+                NOW</a></button> -->
+    </div>
+    <div class="feedback">
+        <div class="center">
+            <p style="font-size: 50px; 
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Our Locations</p>
+            <p style="font-size: 25px; 
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                Reach your Nearest store and get hundred bakery products</p>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="map-container">
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d28840.529770654975!2d68.323597!3d25.369097!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDIyJzM2LjkiTiA2OMKwMjAnMDYuNyJF!5e0!3m2!1sen!2sus!4v1700898486197!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">Hyderabad Autoban</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">Shop 3 & 4 ground floor Sky Cave Mall & Residency. Plot A/8 Main Auto Bahn
+                        Road unit no 3 Latifabad Hyderabad</div>
+                </div>
+
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7235.929484388464!2d67.04374!3d24.933271!3m2!1i1024!2i768!4f13.1!2m1!1sNorth%20Nazimabad%20Kababjees%20bakers!5e0!3m2!1sen!2sus!4v1700898580622!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">North Nazimabad</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">North Naz Kababjees Sher shah suri road block-A Near Matric Board Office,
+                        North Nazimabad, Karachi Nearest Landmark Next to KFC</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">Call 111-666-111 for more information.</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="map-container">
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d463156.58514987596!2d67.1315218!3d24.918071!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3eb339f396abf809%3A0x1e5ad2b57112396b!2sKababjees%20Bakers%20W49J%2B6JC%20Afzal%20St%20Block%2014%20Gulistan-e-Johar%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh!3m2!1d24.918070999999998!2d67.1315218!5e0!3m2!1sen!2s!4v1700898690361!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">Gulistan-e-Johar</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">
+                        Shop no. 1 & 2 darussalam prime block 14 Gulistan-E-Jauhar near baloch ice-cream</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">Call 111-666-111 for more information.</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57902.032396304385!2d67.190684!3d24.902176!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb337ce9cc34335%3A0x94d857a2372e2e1!2sKababjees%20Bakers%20Model%20Colony!5e0!3m2!1sen!2sus!4v1700898856649!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">Model Colony</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">115 A Alamgir Co-operative Housing society Model Colony, opp Alamgir Masjid
+                        Karachi.1</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">Call 111-666-111 for more information.</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="map-container">
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d463127.2362646013!2d67.07171!3d24.925885!3m2!1i1024!2i768!4f13.1!2m1!1sKababjees%20Bakers%20Federal%20B%20Area!5e0!3m2!1sen!2sus!4v1700898896938!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">Federal B Area</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">
+                        Federal B Area:- Bs7 block3 Karimabad fb area near meena bazar.</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">
+                        Call 111-666-111 for more information.</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d462949.3924778943!2d67.0660243!3d24.9731861!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3eb3416b4f0a6e89%3A0x348a2d4e78b3e261!2sKababjees%20Bakers%20984%20Sector%2011-B%20Sector%2011%20B%20North%20Karachi%20Twp%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh!3m2!1d24.973141!2d67.0660266!5e0!3m2!1sen!2s!4v1700898940402!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">North Karachi (UP More)</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">Shop no 2,3,& 4 Plot no a-977 Sector no 11-b North Karachi Township</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">
+                        Call 111-666-111 for more information.</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="map-container">
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d28954.557689593123!2d67.093326!3d24.887074!3m2!1i1024!2i768!4f13.1!2m1!1shighway%20kababjees%20bakers!5e0!3m2!1sen!2sus!4v1700917913766!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">Highway</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">Highway:- Kababjees Highway, near sector 3 B gulzar-e- hirjri scheme 33 near
+                        jamali pull</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">
+                        Call 111-666-111 for more information.</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d28967.575706924355!2d67.0791633!3d24.8314873!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3eb33ddb7acf8a6f%3A0x970c398ed7b257b0!2sKababjees%20Bakers%20%26%20Mart%20-%20Defence%20View%20KPT%20Royal%20Tower%20(U%2FC)%20Mehmoodabad%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2075500!3m2!1d24.8314873!2d67.07916329999999!5e0!3m2!1sen!2s!4v1700918066667!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location-name">Defence View</div>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">Royal tower plot no 71 korangi road (Qayummabad) Defence view, opposite of
+                        imtiaz supermarket.</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">
+                        Call 111-666-111 for more information.</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="map-container">
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d28954.543271627193!2d67.029704!3d24.8871355!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3eb33e4ec0543c27%3A0xdf16418f3fee5a6c!2sPeoples%20Colony%20Karachi%2C%20Karachi%20City%2C%20Sindh!3m2!1d24.8871355!2d67.029704!5e0!3m2!1sen!2s!4v1700918126589!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">Description for Map 1</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">Description for Map 1</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d28950.595597471198!2d67.058188!3d24.903969!3m2!1i1024!2i768!4f13.1!2m1!1sKababjees%2C%20Do-Darya%2C%20M.Ali%20Society%2C%20Shahed-E-Millat%2C%20Clifton%2C%20Gullstan-E-Juhar%D8%8C%20Block%20A%20North%20Nazimabad%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2074600!5e0!3m2!1sen!2sus!4v1700918149902!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="description">
+                    <div class="icon"><img src="location.avif" alt="Location Icon"></div>
+                    <div class="text">Description for Map 1</div>
+                </div>
+                <div class="description">
+                    <div class="icon"><img src="phone.jpg" alt="Location Icon"></div>
+                    <div class="text">Description for Map 1</div>
+                </div>
+                <div class="button-container">
+                    <button class="custom-button">Get Location</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="speciality">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d115801.00016381015!2d67.11467!3d24.905442!3m2!1i1024!2i768!4f13.1!2m1!1sKababjees%20Bakers!5e0!3m2!1sen!2sus!4v1700931968358!5m2!1sen!2sus"
+            width="1350" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="footer">
+        <p style="color: white; margin-top: 50px; margin-left: 90px;">Iso, Halal, & Haccap certified, approved by
+            the Sindh<br>
+            Food Authority & made to the very highest standards of hygiene &<br>
+            healthfulness, our age-old virtues of quality & good service <br>
+            intact, Kababjees is now reinventing the art of baking with the<br>
+            same tender loving care that has earned us your trust.
+        </p>
+        <img src="footerlogo.PNG" alt="img" class="flogo">
+
+        <ul style="margin-top: 40px;">
+            <li><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+              padding: 20px;" href="#home">Cake</a></li>
+            <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+                padding: 20px;" href="#news">Sweets</a></li>
+            <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+                padding: 20px;" href="#contact">Nimco</a></li>
+
+        </ul>
+        <ul style="margin-top: 40px;">
+            <li><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+              padding: 20px; margin-left: 30px; " href="#home">LOCATIONS</a></li>
+            <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+                padding: 20px; margin-left: 30px;" href="#news">MENU</a></li>
+            <li style="margin-top: 20px;"><a style="text-decoration: none; color: white; cursor: pointer; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+                padding: 20px; margin-left: 30px; " href="#contact">CONTACT US</a></li>
+
+        </ul>
+    </div>
+    <div class="socialmedia">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+    </script>
+
+
+</body>
+
+</html>
